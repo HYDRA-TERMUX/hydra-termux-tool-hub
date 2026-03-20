@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HYDRA TERMUX TOOL HUB</title>
+  <meta name="description" content="100+ Termux tools for cybersecurity, OSINT, recon, and development. Free Android hacking toolkit dashboard." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- SCANLINE OVERLAY -->
+  <div class="scanlines"></div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-block">
+        <div class="logo-icon">⬡</div>
+        <div class="logo-text">
+          <span class="logo-main">HYDRA</span>
+          <span class="logo-sub">TERMUX TOOL HUB</span>
+        </div>
+      </div>
+      <div class="header-stats" id="headerStats">
+        <span class="stat-chip"><span class="stat-num" id="totalCount">0</span> TOOLS</span>
+        <span class="stat-chip live">● LIVE</span>
+      </div>
+    </div>
+    <div class="header-tagline">// Android Cybersecurity Toolkit — No Root Required</div>
+  </header>
+
+  <!-- HERO BANNER -->
+  <section class="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge">[ ETHICAL HACKING EDUCATION ]</div>
+      <h1 class="hero-title">
+        <span class="glitch" data-text="TOOL HUB">TOOL HUB</span>
+      </h1>
+      <p class="hero-desc">
+        The most complete collection of Termux tools for Android — covering recon, OSINT, exploitation, password testing, networking, and development. All commands ready to copy.
+      </p>
+      <div class="hero-chips">
+        <span class="chip">🤖 No Root</span>
+        <span class="chip">📱 Android</span>
+        <span class="chip">🆓 Free</span>
+        <span class="chip">✅ 2026 Tested</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTROLS -->
+  <section class="controls-section">
+    <div class="controls-inner">
+      <div class="search-wrap">
+        <span class="search-icon">⌕</span>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search tools, categories, descriptions..."
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button class="clear-btn" id="clearSearch" title="Clear search">✕</button>
+      </div>
+      <div class="filter-wrap">
+        <select id="categoryFilter">
+          <option value="all">// ALL CATEGORIES</option>
+          <option value="Recon">Recon</option>
+          <option value="Exploitation">Exploitation</option>
+          <option value="Password">Password</option>
+          <option value="OSINT">OSINT</option>
+          <option value="Network">Network</option>
+          <option value="System">System</option>
+          <option value="Dev">Dev</option>
+          <option value="Utility">Utility</option>
+        </select>
+      </div>
+      <div class="results-info" id="resultsInfo">Showing <strong id="shownCount">0</strong> tools</div>
+    </div>
+  </section>
+
+  <!-- TOOL GRID -->
+  <main class="main-content">
+    <div class="tool-grid" id="toolGrid">
+      <!-- Tools injected by JS -->
+    </div>
+    <div class="no-results" id="noResults" style="display:none;">
+      <div class="no-results-icon">⊘</div>
+      <p>No tools found matching your query.</p>
+      <button onclick="document.getElementById('searchInput').value=''; document.getElementById('categoryFilter').value='all'; filterTools();">Reset Filters</button>
+    </div>
+  </main>
+
+  <!-- VISIT BLOG SECTION -->
+  <section class="blog-section">
+    <div class="blog-inner">
+      <div class="blog-text">
+        <div class="blog-label">// LEARN MORE</div>
+        <h2 class="blog-title">Full Tutorials on <span class="accent">HYDRA TERMUX</span></h2>
+        <p>Step-by-step guides for every tool, beginner to advanced. Written by Rixon Xavier for the Android hacking community.</p>
+      </div>
+      <a href="https://hydratermux.blogspot.com" target="_blank" rel="noopener" class="blog-btn">
+        <span>VISIT BLOG</span>
+        <span class="btn-arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-logo">⬡ HYDRA TERMUX</div>
+      <div class="footer-links">
+        <a href="https://hydratermux.blogspot.com" target="_blank" rel="noopener">Blog</a>
+        <span>·</span>
+        <span>Tools: <strong id="footerCount">0</strong></span>
+        <span>·</span>
+        <span>No Root Required</span>
+      </div>
+      <div class="footer-copy">
+        © 2026 HYDRA TERMUX · Rixon Xavier · Educational Use Only
+      </div>
+      <div class="footer-disclaimer">
+        ⚠ All tools are listed for educational purposes only. Always practice on systems you own or have explicit permission to test.
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast" id="toast">
+    <span class="toast-icon">✓</span>
+    <span id="toastMsg">Command copied!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
